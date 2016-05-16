@@ -28,7 +28,7 @@
     
 * read
     * reader view, blog post will be in "infinite scroll" and auto-load as user progressed
-    * title of artice will appear in <title></title> and in the heading of Navbar
+    * title of artice will appear in `<title></title>` and in the heading of Navbar
     * distractions will be minimized, comment section will appear on right.
     * exit option
     
