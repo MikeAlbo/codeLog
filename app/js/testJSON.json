@@ -1,0 +1,36 @@
+// example json for an article
+var testArticle = {
+    "article_Name" : "Form-Control",
+    "article_subtitle" : "bootstrap form control",
+    "article_type" : "code-example", // code-examle/ blog-post
+    "create_date" : "date",
+    "updated_date" : "date",
+    "article_text" : "this is where the text goes for the article, it can be super short or super long. It doesn't really matter",
+    "article_links" : [
+        {
+            "type" : "codePen",   // codepen / bootstrap/ angular / etc
+            "link" : "http://codepen.io/mikeA21873"
+        },
+        {
+            "type" : "bootstrap",
+            "link" : "http://bootstrap.com/#form-control"
+        }
+    ],
+    "bookmark_count" : 2,
+    "comments" : [
+        {
+            "comment_id" : 1029395856
+        },
+        {
+            "comment_id" : 4329538244
+        }
+        
+    ],
+    "category" : "html/css", // html/css / angular/ etc.
+    "article_code" : {
+        "code_title" : "example: form-control with Bootstrap",
+        "code_text" : "&lang form class='form-control' &rang",
+        "code_footer" : "use this with caution becuase you should, I don't know."
+    }
+};
+

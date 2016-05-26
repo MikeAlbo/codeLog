@@ -1,0 +1,89 @@
+
+<div class="col-xs-12 col-sm-6 col-sm-offset-3" id="loginFull">
+    
+    <div class="container-fluid">
+        <h1 class="text-center">Code-Dock<br><small>find something to put here</small></h1>
+        <div class="col-xs-12 text-center" id="loginPageButtons">
+            <ul class="list-inline">
+                <li><button class="btn btn-primary activeButton" ng-click="signUpSelect = 1" >Login</button></li>
+                <li>or</li>
+                <li><button class="btn btn-primary" ng-click="signUpSelect = 0">Signup</button></li>
+            </ul>
+            <p class="col-xs-10 col-xs-offset-1">Log in or register to comment, save, and create post...</p>
+        </div>
+        
+        <!-- sign in section -->
+        <div class="text-center"  id="loginForm" ng-show="signUpSelect">
+                
+            <!-- error output -->
+            <p class="col-xs-6 col-xs-offset-3">
+                this will be the errror output
+            </p>
+            
+            <h2> Already a Member?</h2>
+            
+            <ul class="list-inline">
+                <li> <a href="#" class="activeLogin"><i class="fa fa-envelope" aria-hidden="true"></i> / <i class="fa fa-key" aria-hidden="true"></i></a></li>
+                <li> &nbsp; | &nbsp; </li>
+                <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a> </li>  
+            </ul>
+            
+            <form novalidate class="well" name="loginFull">
+                <div class="form-group has-feedback" ng-class="{'has-error' : loginFull.email.$invalid && loginFull.email.$touched, 'has-success' : loginFull.email.$valid && loginFull.email.$touched }">
+                    <label for="email" class="control-label">Email: </label>
+                    <input name="email" type="email" class="form-control text-center input-sm" placeholder="example@gmail.com" ng-model="user.email" ng-required="true" />
+                </div>
+                <div class="form-group has-feedback" ng-class="{'has-error' : loginFull.password.$invalid && loginFull.password.$touched, 'has-success' : loginFull.password.$valid && loginFull.password.$touched }">
+                    <label for="password" class="control-label">password: </label>
+                    <input name="password" type="password" class="form-control text-center input-sm" placeholder="password" ng-model="user.password" ng-required="true"/>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" ng-disabled="loginFull.email.$invalid || loginFull.password.$invalid">Submit</button>
+            </form>
+        </div>
+        
+        <!-- register section -->
+        <div class="text-center" id="registerForm" ng-hide="signUpSelect">
+            <h2> Create an Account?</h2>
+            
+            <ul class="list-inline">
+                <li> <a href="#" class="activeLogin"><i class="fa fa-envelope" aria-hidden="true"></i> / <i class="fa fa-key" aria-hidden="true"></i></a></li>
+                <li> &nbsp; | &nbsp; </li>
+                <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a> </li>  
+            </ul>
+            
+            <form novalidate class="well" name="registerFull">
+                <div class="form-group has-feedback" ng-class="{'has-error': registerFull.firstName.$invalid && registerFull.firstName.$touched, 'has-success' : registerFull.firstName.$valid && registerFull.firstName.$touched}">
+                    <label for="firstName" class="control-label">First Name: </label>
+                    <input name="firstName" type="text" class="form-control text-center input-sm" placeholder="Michael" ng-model="user.firstName" ng-required="true" />
+                </div>
+                <div class="form-group has-feedback" ng-class="{'has-error': registerFull.lastName.$invalid && registerFull.lastName.$touched, 'has-success' : registerFull.lastName.$valid && registerFull.lastName.$touched}">
+                    <label for="lastName" class="control-label">Last Name: </label>
+                    <input name="lastName" type="text" class="form-control text-center input-sm" placeholder="Albonetti" ng-model="user.lastName" ng-required="true" />
+                </div>
+                
+                <div class="form-group has-feedback" ng-class="{'has-error': registerFull.email.$invalid && registerFull.email.$touched, 'has-success' : registerFull.email.$valid && registerFull.email.$touched}">
+                    <label for="email" class="control-label">Email: </label>
+                    <input name="email" type="email" class="form-control text-center input-sm" placeholder="example@gmail.com" ng-model="user.email" ng-required="true" />
+                </div>
+                <div class="form-group has-feedback" ng-class="{'has-error': registerFull.password.$invalid && registerFull.password.$touched, 'has-success' : registerFull.password.$valid && registerFull.password.$touched}">
+                    <label for="password" class="control-label">password: </label>
+                    <input name="password" type="password" class="form-control text-center input-sm" placeholder="password" ng-model="user.password" ng-required="true"/>
+                </div>
+                <div class="form-group has-feedback" ng-class="{'has-error': registerFull.verifyPassword.$invalid && registerFull.verifyPassword.$touched && user.password != user.verifyPassword, 'has-success' : registerFull.verifyPassword.$valid && registerFull.verifyPassword.$touched && user.password == user.verifyPassword}">
+                    <label for="password" class="control-label">verify password: </label>
+                    <input name="password" type="password" class="form-control text-center input-sm" placeholder="password" ng-model="user.verifyPassword" ng-required="true"/>
+                </div>
+                <button ng-disabled="registerFull.$invalid || user.password != user.verifyPassword" type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+        
+    </div>
+    
+    
+</div>

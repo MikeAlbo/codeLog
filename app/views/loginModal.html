@@ -1,0 +1,124 @@
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTilte" ng-controller="RegistrationCtrl">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" ng-hide="signUpSelect">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center">Login <br> <small> email/ password or via social media</small></h4>
+          <p class="text-center">Not Signed up? <a ng-click="signUpSelect = 1">Register Here</a>. </p>
+      </div>
+      <div class="modal-body text-center" id="loginModal">
+        
+            <ul class="list-inline">
+                <li> <a href="#" class="activeLogin"><i class="fa fa-envelope" aria-hidden="true"></i> / <i class="fa fa-key" aria-hidden="true"></i></a></li>
+                <li> &nbsp; | &nbsp; </li>
+                <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a> </li>  
+            </ul>
+          
+          <div  class="loginViaEmail">
+              
+              <!-- error output -->
+              <p class="col-xs-6 col-xs-offset-3">error output goes here</p>
+            <form class="form-inline"  name="modalLoginForm" novalidate>
+                <div class="form-group has-feedback" ng-class="{'has-error' : modalLoginForm.email.$invalid && modalLoginForm.email.$touched, 'has-success' : modalLoginForm.email.$valid && modalLoginForm.email.$touched}">
+                    <label for="email" class="control-label" >Email: </label>
+                    <input name="email" type="email" class="form-control text-center" placeholder="example@gmail.com" ng-model="user.email" ng-required="true"  />
+                </div>
+                <div class="form-group has-feedback" ng-class="{'has-error': modalLoginForm.password.$invalid && modalLoginForm.password.$touched, 'has-success' : modalLoginForm.password.$valid && modalLoginForm.password.$touched}">
+                    <label for="password" class="control-label">password: </label>
+                    <input name="password" type="password" class="form-control text-center" placeholder="password" ng-model="user.password"  ng-required="true" />
+                </div>
+              </form>
+          </div>
+                
+                
+            
+          
+          
+      </div>
+      <div class="modal-footer">
+            <div class="checkbox col-xs-3 text-left">
+            <label>
+                <input type="checkbox" ng-model="user.rememberMe" /> Remember me?
+                </label> 
+          </div>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" ng-disabled="modalLoginForm.email.$invalid || modalLoginForm.password.$invalid">Submit</button>
+        
+      </div>
+    </div>
+      
+    <!-- register -->
+      
+      <div class="modal-content" ng-show="signUpSelect">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center">Register <br> <small> email/ password or via social media</small></h4>
+          <p class="text-center">Already signed up? <a ng-click="signUpSelect= 0">Login Here</a>. </p>
+          
+          <!-- error output -->   <!-- needs to be moved to the controller!!!! -->
+          <p class="col-xs-6 col-xs-offset-3">  
+            <span class="text-danger" ng-show="modalRegisterForm.firstName.$invalid && modalRegisterForm.firstName.$touched">Your first name is required...</span>
+            <span class="text-danger" ng-show="modalRegisterForm.lastName.$invalid && modalRegisterForm.lastName.$touched">Your last name is required...</span>
+            <span class="text-danger" ng-show="modalRegisterForm.email.$invalid && modalRegisterForm.email.$touched">Please enter a valid email.</span> 
+            <span class="text-danger" ng-show="modalRegisterForm.password.$invalid && modalRegisterForm.password.$touched">Please enter a valid password.</span> 
+            <span class="text-danger" ng-show="modalRegisterForm.verifyPassword.$invalid && modalRegisterForm.verifyPassword.$touched && user.verifyPassword != user.password">Your Passwords do not match.</span><br>  
+          </p>
+      </div>
+      <div class="modal-body text-center loginModal">
+        
+            <ul class="list-inline">
+                <li> <a href="#" class="activeLogin"><i class="fa fa-envelope" aria-hidden="true"></i> / <i class="fa fa-key" aria-hidden="true"></i></a></li>
+                <li> &nbsp; | &nbsp; </li>
+                <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                <li> <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a> </li>  
+            </ul>
+          
+          <div  class="loginViaEmail">
+            <form class="text-center" name="modalRegisterForm" novalidate>
+                <div class="form-group has-feedback" ng-class="{'has-error' : modalRegisterForm.firstName.$invalid && modalRegisterForm.firstName.$touched, 'has-success' : modalRegisterForm.firstName.$valid}">
+                    <label for="firstName" class="control-label">First Name: </label>
+                    <input name="firstName" type="text" class="form-control text-center input-sm" placeholder="Michael" ng-model="user.firstName" ng-required="true" />
+                </div>
+                <div class="form-group has-feedback" ng-class="{'has-error': modalRegisterForm.lastName.$invalid && modalRegisterForm.lastName.$touched, 'has-success' : modalRegisterForm.lastName.$valid}">
+                    <label for="lastName" class="control-label">Last Name: </label>
+                    <input name="lastName" type="text" class="form-control text-center input-sm" placeholder="Albonetti" ng-model="user.lastName" ng-required="true" />
+                </div>
+                <div class="form-group has-feedback" ng-class="{'has-error': modalRegisterForm.email.$invalid && modalRegisterForm.email.$touched, 'has-success' : modalRegisterForm.email.$valid}">
+                    <label for="email" class="control-label">Email: </label>
+                    <input name="email" type="email" class="form-control text-center" placeholder="example@gmail.com" ng-model="user.email" ng-required="true" />
+                </div>
+                <div class="form-group has-feedback" ng-class="{'has-error': modalRegisterForm.password.$invalid && modalRegisterForm.password.$touched, 'has-success': modalRegisterForm.password.$valid}">
+                    <label for="password" class="control-label">password: </label>
+                    <input name="password" type="password" class="form-control text-center" placeholder="password" ng-model="user.password" ng-required="true"/>
+                </div>
+                <div class="form-group has-feedback" ng-class="{'has-error': modalRegisterForm.verifyPassword.$invalid && modalRegisterForm.verifyPassword.$touched && user.verifyPassword != user.password , 'has-success' : modalRegisterForm.verifyPassword.$valid && user.verifyPassword == user.password}">
+                    <label for="verifyPassword" class="control-label"> verify password: </label>
+                    <input name="verifyPassword" type="password" class="form-control text-center" placeholder="password" ng-model="user.verifyPassword" ng-required="true" />
+                </div>
+              </form>
+          </div>
+                
+                
+            
+          
+          
+      </div>
+      <div class="modal-footer">
+            <div class="checkbox col-xs-3 text-left">
+            <label>
+                <input type="checkbox" ng-model="user.rememberMe" /> Remember me?
+                </label> 
+          </div>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" ng-disabled="modalRegisterForm.firstName.$invalid || modalRegisterForm.lastName.$invalid || modalRegisterForm.email.$invalid || modalRegisterForm.password.$invalid || user.password != user.verifyPassword">Submit</button>
+        
+      </div>
+    </div>
+  </div>
+</div>

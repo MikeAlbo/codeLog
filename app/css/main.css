@@ -1,0 +1,354 @@
+/* cross site */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    padding: 0px;
+    
+}
+
+/* section one, landing page */
+
+#sectionOne {
+    height: 100%;
+}
+
+#sectionOne h1 {
+    position: relative;
+    top: 35%;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+    font-size: 5em;
+    color: rgba(50,50,50,.9);
+    line-height: .6em;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+}
+
+#sectionOne small {
+    font-size: .4em
+}
+
+
+/* ---- header nav bar ---- */
+
+#landingNav{
+    padding-top: .5em;
+    top: 70%;
+    border-bottom: 1px solid rgba(150,150,150,.5);
+}
+
+.navbar-brand {
+    padding-left: 3em;
+    font-size: 1.5em;
+    opacity: 0;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+
+.navbar-default {
+    background-color: white;
+    font-size: 1em;
+    border: 0;
+}
+
+#newUpdatedNav{
+    border-right: 1px solid rgba(150,150,150,.5);
+    padding: 0 1em 0 2em;
+}
+
+#navbarCategories{
+    padding: 0 0 0 1em;
+}
+
+#navbarSignIn{
+    margin-right: 1em;
+    font-size: 1.2em;
+    opacity: 0;
+}
+
+
+
+
+/* article section */
+
+.article {
+    padding: 10px;
+    border-bottom: 1px solid rgba(150,150,150,.3);
+}
+
+.articleText {
+    border-right: 1px solid rgba(150,150,150,.3);
+    padding: 10px;
+}
+
+.bookmarkIcon {
+    color: rgba(50,150,200,1);
+    
+}
+
+.commentIcon{
+    color: rgba(50,150,200,1);
+}
+
+.createdOn {
+    padding-top: 0;
+    margin-top: 0;
+    
+    font-size: .9em;
+    color: rgba(50,50,50,.9);
+    letter-spacing: .03em;
+}
+
+.createdOn span {
+    color: rgba(50,50,50,.7);
+}
+
+.articleHeader {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.articleLinks {
+    font-size: .8em;
+    color: rgba(50,50,50,.9);
+}
+
+.articleLinks i {
+    font-size: 1.2em;
+}
+
+/* code section */
+
+
+
+pre, code {
+    direction:rtl;
+    text-align: left;
+    font-family: "andale mono";
+   
+}
+
+.articleCode{
+    padding: .5em;
+}
+
+.articleCode code {
+    padding: 1em;
+    border-radius: 3px;
+    margin-top: -1.8em;
+}
+
+.articleCode h5 {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 0;
+    padding-left: 2em;
+    padding-bottom: .5em;
+    font-size: 1.2em;
+    letter-spacing: .05em;
+    border-bottom: 1px solid rgba(100,100,100,.2);
+}
+
+
+
+/* section 2, main page, category page */
+
+.categoryPage {
+    height: 100%;
+    padding-top: 60px;
+    overflow: scroll;
+}
+
+.categoryContent{
+    overflow: scroll;
+    height: 100%;
+    border: 1px solid rgba(100,100,100,.4);
+    border-radius: 3px;
+}
+
+.categoryContentHeading{
+    border-bottom: 1px solid rgba(100,100,100,.4);
+    
+}
+
+.categorySummary{
+    font-size: 1.6em; 
+    padding: 1em;
+    letter-spacing: .01em;
+    line-height: 2em;
+    word-spacing: .1em;
+}
+
+.categoryUpdated{
+    font-size: .9em;
+    color: rgba(100,100,100,.8);
+    margin-bottom: 0;
+}
+
+
+
+
+/* right side navbar */
+
+.categoryNav {
+    
+    color: white;
+    background-color: rgba(50,50,50,.9);
+    height: 100%;
+    overflow: scroll;
+    
+}
+
+#navList dt {
+    color: rgba(200,200,200,.8);
+    font-size: .9em;
+    padding-top: 1em;
+    border-bottom: 1px solid rgba(100,100,100,.8);
+    text-align: center;
+}
+
+#navList dd {
+    color: rgba(250,250,250,1);
+    font-size: .9em;
+    padding-left: .5em;
+}
+
+#navIntro {
+    padding: .5em 0;
+    border-bottom: 1px solid rgba(100,100,100,.8);
+    margin-bottom: .5em;
+}
+
+#navCategories {
+    font-size: 1.5em;
+    color: rgba(250,250,250,1);
+}
+
+#navCategories p {
+    margin-bottom: .2em;;
+}
+
+/* ----- login modal ----- */
+
+.loginModal {
+    padding: 1em 0;
+}
+
+.loginModal ul {
+    border-bottom: 1px solid rgba(100,100,100,.3);
+    padding-bottom: 1em;
+}
+
+.loginModal li {
+    font-size: 1.5em;
+    padding: 0 .5em;
+    color: rgba(50,50,50,.9);
+}
+
+.loginModal a {
+    color: rgba(50,50,50,.9);
+}
+
+.loginModal a:hover {
+    color: rgba(50,150,250,.5);
+}
+
+.activeLogin {
+    color: rgba(50,150,250,.9) !important;
+}
+
+.loginViaEmail {
+    padding: .5em
+}
+
+.loginViaEmail div {
+    padding: 0 1em;
+}
+
+/* login full */
+
+#loginFull{
+    top: 2%;
+    position: fixed;
+    z-index: 100;
+    border: 1px solid rgba(150,150,150,.5);
+    border-radius: 3px;
+    background-color: white;
+}
+
+#loginFull h1 {
+    font-size: 2em;
+    line-height: .6em;
+}
+
+#loginFull h1 small {
+    font-size: .5em;
+}
+
+#loginFull h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid rgba(150,150,150,.5);
+    padding-bottom: .5em;
+}
+
+
+
+#loginPageButtons button {
+    width: 6em;
+    color: rgba(50,50,50,.9);
+    background-color: white;
+}
+
+#loginPageButtons p {
+    font-size: .8em;
+}
+
+#loginForm {
+    padding-bottom: .1em;
+}
+
+#loginForm li  {
+    font-size: 1.5em;
+    
+}
+
+#loginForm li a {
+    color: rgba(50,50,50,.9);
+}
+
+#registerForm {
+    padding-bottom: .1em;
+}
+
+#registerForm .form-group {
+    margin: .5em 0;
+}
+
+#registerForm li  {
+    font-size: 1.5em;
+    
+}
+
+#registerForm li a {
+    color: rgba(50,50,50,.9);
+}
+
+.activeButton {
+    background-color: rgba(50,50,50,.9);
+    color: white;
+}
+

@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Code-Dock</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav" id="newUpdatedNav">
+        <li class="active"><a href="#">Newest <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Updated</a></li>
+      </ul>
+      <ul class="nav navbar-nav" id="navbarCategories"> <!-- ng-repeat -->  
+        <li><a href="#">HTML/CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">Angular JS</a></li>
+        <li><a href="#">Bootstrap</a></li>
+        <li><a href="#">Books</a></li>
+        <li><a href="#">Blog</a></li>
+        
+      </ul>
+        <div class="navbar-right" id="navbarSignIn" ng-controller="RegistrationCtrl">
+        <p class="navbar-text">
+            <a ng-click="navSelect(0)" >Login</a> 
+             &nbsp; or  &nbsp;
+            <a ng-click="navSelect(1)">Register</a> </p>
+        <p class="navbar-text " ng-hide="true">Signed in as <a href="#" class="navbar-link">Michael</a></p>
+        </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
